@@ -1,0 +1,347 @@
+/* ----------- Variables Globales ----------- */
+:root {
+    --color-principal: #0cdb69; /* Gris oscuro */
+    --color-secundario: #4C4C4C; /* Gris medio */
+    --color-acento: #3498db; /* Azul acento */
+    --color-fondo: #FAFAFA; /* Fondo claro */
+    --color-blanco: #FFFFFF;
+    --fuente-principal: 'Raleway', sans-serif;
+    --transicion: 0.3s ease;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+/* ----------- Estilo Global ----------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-principal);
+    color: var(--color-principal);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: var(--color-acento);
+    transition: color var(--transicion);
+}
+
+a:hover {
+    color: var(--color-principal);
+}
+
+/* ----------- Cabecera ----------- */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-principal);
+}
+
+.navegacion__lista {
+    display: flex;
+    gap: 2rem;
+}
+
+.navegacion__elemento a {
+    font-size: 1rem;
+    color: var(--color-secundario);
+    transition: color var(--transicion);
+}
+
+.navegacion__elemento a:hover {
+    color: var(--color-acento);
+}
+
+/* ----------- Sección Presentación ----------- */
+.presentacion {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.presentacion__foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.presentacion__contenedor {
+    flex: 1;
+}
+
+.presentacion__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.presentacion__subtitulo {
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+/* Redes Sociales */
+.redes {
+    display: flex;
+    gap: 1rem;
+}
+
+.redes__img a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-acento);
+    font-weight: 500;
+    transition: transform var(--transicion);
+}
+
+.redes__img a:hover {
+    transform: translateY(-2px);
+}
+
+/*------------ Sección sobre mi    ----------- */
+.sobre-mi__texto{
+    color: var(--color-secundario);
+}
+
+
+
+/* ----------- Secciones Generales ----------- */
+section {
+    margin-top: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-principal);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Habilidades y Aficiones */
+.habilidades__lista, .aficiones__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.habilidades__elemento, .aficiones__elemento {
+    text-align: center;
+    color: var(--color-secundario);
+}
+
+.habilidades__icono, .aficiones__icono {
+    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.aficiones__icono{
+    width: 50px;
+    height: 50px;
+    background: rgb(0, 255, 55); /* Cambia el color aquí */
+    mask-size: cover;
+    -webkit-mask-size: cover;        
+}
+    
+/* Formación */
+.formacion__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formacion__elemento {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formacion__icono {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.formacion__nombre{
+    color: var(--color-secundario);
+}
+
+.formacion__detalle{
+    color: var(--color-secundario);
+}
+
+/* Proyectos */
+.proyectos__contenedor {
+    background-color: var(--color-blanco);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.proyectos__descripcion{
+    color: var(--color-secundario);
+}
+
+/* Formulario de Contacto */
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contacto__campo {
+    padding: 0.75rem;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto__boton {
+    padding: 0.75rem;
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transicion);
+}
+
+.contacto__boton:hover {
+    background-color: var(--color-principal);
+}
+
+/* ----------- Escritorio Grande (a partir de 1200px) ----------- */
+@media (min-width: 1200px) {
+    .cabecera {
+        padding: 2rem 4rem;
+    }
+
+    .cabecera__titulo {
+        font-size: 2.5rem;
+    }
+
+    .navegacion__lista {
+        gap: 3rem;
+    }
+
+    .presentacion {
+        gap: 4rem;
+        padding: 3rem;
+    }
+
+    .presentacion__foto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .habilidades__lista, .aficiones__lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ----------- Tabletas (entre 768px y 1199px) ----------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cabecera__titulo {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .navegacion__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentacion__foto {
+        margin-bottom: 1.5rem;
+    }
+
+    .habilidades__lista, .aficiones__lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ----------- Dispositivos Móviles (menos de 768px) ----------- */
+@media (max-width: 767px) {
+    body {
+        padding: 1rem;
+    }
+
+    .cabecera {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .navegacion__lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentacion__foto {
+        width: 120px;
+        height: 120px;
+    }
+
+    .habilidades__lista, .aficiones__lista {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contacto__formulario {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
